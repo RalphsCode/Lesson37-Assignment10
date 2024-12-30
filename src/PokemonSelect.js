@@ -6,7 +6,7 @@ import { choice } from "./helpers";
 function PokemonSelect({ add, pokemon = pokemonList }) {
   const [pokeIdx, setPokeIdx] = useState(0);
   const handleChange = evt => {
-    setPokeIdx(evt.target.value);
+    setPokeIdx(Number(evt.target.value));
   };
 
   return (
