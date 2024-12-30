@@ -3,7 +3,8 @@ import pokemonList from "./pokemonList";
 import { choice } from "./helpers";
 
 /* Select element to choose from common pokemon. */
-function PokemonSelect({ add, pokemon = pokemonList }) {
+// add is a passed in function from the custom hook
+function PokemonSelect({ addCard, pokemon = pokemonList }) {
   const [pokeIdx, setPokeIdx] = useState(0);
   const handleChange = evt => {
     setPokeIdx(Number(evt.target.value));
@@ -18,8 +19,10 @@ function PokemonSelect({ add, pokemon = pokemonList }) {
           </option>
         ))}
       </select>
-      <button onClick={() => add(pokemon[pokeIdx])}>Catch one!</button>
-      <button onClick={() => add(choice(pokemon))}>I'm feeling lucky</button>
+      {/* Uses the function returned in the custon hook 
+        * to add a new card*/}
+      <button onClick={() => addCard(pokemon[pokeIdx])}>Catch one!</button>
+      <button onClick={() => addCard(choice(pokemon))}>I'm feeling lucky</button>
     </div>
   );
 }
