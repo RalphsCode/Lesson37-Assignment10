@@ -1,8 +1,10 @@
 # RalphsCode - Card Games
  Deck of Cards, and Pokemon card Selector App.
+Split screens showing regular cards on one side and Pokemon cards on the other. 
+One can draw a new card from either side, and click on the card to flip it over.
 
  ## Technologies:
- JavaScript, React, JSON, State / useState, useEffect, JSX, Components, custom use files.
+ JavaScript, React, JSON, State / useState, useEffect, JSX, Components, custom hooks, custom use files.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
